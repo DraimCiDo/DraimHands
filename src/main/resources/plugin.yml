@@ -1,0 +1,7 @@
+name: DraimHands
+version: '${version}'
+main: me.draimgoose.draimhands.DraimHands
+api-version: 1.17
+authors: [ DraimGooSe ]
+description: Ограничение на используемые предметы при добычи предметов
+website: draimcido.ru
