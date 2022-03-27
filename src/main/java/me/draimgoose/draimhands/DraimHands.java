@@ -3,6 +3,7 @@ package me.draimgoose.draimhands;
 import org.bukkit.World;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -29,12 +30,17 @@ public class DraimHands extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
-
+        createFiles();
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
     }
+
+    // Создание файлов
+    private void createFiles() {
+        File folder = new File(this.getDataFolder() + File.separator + "players");
+        if (!folder.exists()) folder.mkdirs();
+    }
+
 }
